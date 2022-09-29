@@ -8,6 +8,6 @@ class Server private constructor(port: Long) {
 }
 
 fun main() {
-    //val server = Server(8080) // cant do this, is private
+    // val server = Server(8080) // cant do this, is private
     val server = Server.withPort(8080)
 }

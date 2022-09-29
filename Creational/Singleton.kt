@@ -2,10 +2,10 @@
 // los tipos objeto pueden extender de otro tipo
 object NoMoviesList
 
-fun main () {
+fun main() {
     val myFavoriteQuickAndAngryMovies = NoMoviesList
     val yourFavoriteQuickAndAngryMovies = NoMoviesList
 
     // ambos son el mismo objeto en memoria (secomprueba con el operador ===)
-    print (myFavoriteQuickAndAngryMovies === yourFavoriteQuickAndAngryMovies)
+    print(myFavoriteQuickAndAngryMovies === yourFavoriteQuickAndAngryMovies)
 }
