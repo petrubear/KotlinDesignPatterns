@@ -25,9 +25,10 @@ class AthleticLegs : Legs {
     override fun move() = REGULAR_SPEED * 2
 }
 
-interface Tropper {
+interface Trooper {
     fun move(x: Long, y: Long)
-    fun attackRevel(x: Long, y: Long)
+    fun attackRebel(x: Long, y: Long)
+    fun retreat()
 }
 
 interface Weapon {
@@ -38,19 +39,30 @@ interface Legs {
     fun move(): Meters
 }
 
-data class StormTropper(
+data class StormTrooper(
         private val weapon: Weapon,
         private val legs: Legs,
-) : Tropper {
+) : Trooper {
     override fun move(x: Long, y: Long) {
         legs.move()
     }
 
-    override fun attackRevel(x: Long, y: Long) {
+    override fun attackRebel(x: Long, y: Long) {
         weapon.attack()
+    }
+
+    override fun retreat() {
+        println("Retreat!")
+        legs.move()
     }
 }
 
-val stormTropper = StormTropper(Rifle(), RegularLegs())
-val flameTropper = StormTropper(Flamethrower(), RegularLegs())
-val scoutTropper = StormTropper(Rifle(), AthleticLegs())
+val stormTrooper = StormTrooper(Rifle(), RegularLegs())
+val flameTrooper = StormTrooper(Flamethrower(), RegularLegs())
+val scoutTrooper = StormTrooper(Rifle(), AthleticLegs())
+
+fun main() {
+    println(stormTrooper)
+    println(flameTrooper)
+    println(scoutTrooper)
+}
