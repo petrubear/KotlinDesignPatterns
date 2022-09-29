@@ -19,8 +19,8 @@ enum class Power {
     FALSE
 }
 
-fun cellphone(chargeaBle: UsbTypeC) {
-    if (chargeaBle.hasPower) {
+fun cellphone(chargeable: UsbTypeC) {
+    if (chargeable.hasPower) {
         println("Charging cellphone")
     } else {
         println("No power")
