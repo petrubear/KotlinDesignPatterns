@@ -1,1 +1,6 @@
 **/**.jar
+.idea
+.vscode
+target
+build
+out
