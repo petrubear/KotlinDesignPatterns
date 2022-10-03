@@ -1,8 +1,10 @@
 **/**.jar
+.DS_Store
+.gradle
 .idea
 .vscode
-target
-out
-.gradle
 bin
 build
+out
+target
+
